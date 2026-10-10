@@ -1,2 +1,4 @@
-# Auto detect text files and perform LF normalization
 * text=auto
+*.csv text eol=lf
+*.py text eol=lf
+*.json text eol=lf

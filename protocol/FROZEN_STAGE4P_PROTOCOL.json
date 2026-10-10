@@ -1,0 +1,30 @@
+{
+  "protocol_id": "WOODPHYS_DG_STAGE4P_PUBLIC_EXTERNAL_REPLICATION_V1",
+  "claim_boundary": "Spruce is a second cross-regime structural-board replication, not a same-regime clear-wood lockbox.",
+  "frozen_parameters": {
+    "moe_mpa": {
+      "tau": 3.0,
+      "beta": 0.75,
+      "q": 2934.45789999,
+      "m_cal": 567.8071925336885
+    },
+    "mor_mpa": {
+      "tau": 0.2,
+      "beta": 1.0,
+      "q": 16.12726911,
+      "m_cal": 2.7262826228755124
+    }
+  },
+  "primary_spruce_analysis": "all 2522 source-validated rows",
+  "metadata_only_sensitivity": "exclude specimen length below 500 mm",
+  "prohibited": [
+    "tune on Spruce labels",
+    "claim same-regime transport",
+    "claim universal superiority"
+  ],
+  "decision_hierarchy": {
+    "FULL_SUPPORT": "positive R2 and no material inferiority to simple comparators on compatible data",
+    "PARTIAL_SUPPORT": "limited triage or transport evidence",
+    "NO_TRANSPORT_SUPPORT": "negative R2 or material inferiority; coverage due mainly to width"
+  }
+}

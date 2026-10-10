@@ -1,0 +1,43 @@
+{
+  "protocol_id": "WOODPHYS_DG_STAGE4Q_TRANSPORT_OR_ADAPT_2026-07-31",
+  "frozen_at_local": "2026-07-31T18:47:00+03:00",
+  "purpose": "Separate zero-shot transport from target-regime adaptation and replace unstable source disagreement with cross-fitted target residual risk.",
+  "decision_sequence": [
+    "LABEL_BLIND_MEASUREMENT_REGIME_GATE",
+    "IF_COMPATIBLE_RUN_FROZEN_ZERO_SHOT_MODEL",
+    "IF_INCOMPATIBLE_DO_NOT_AUTO_PREDICT",
+    "IF_TARGET_LABELS_EXIST_FIT_TARGET_REGIME_MODEL_WITH_GROUP_SEPARATION",
+    "ESTIMATE_CROSS_FITTED_RESIDUAL_RISK",
+    "APPLY_REPEATED_GROUP_CV_CONSENSUS_PREDICT_REVIEW_ABSTAIN",
+    "CALIBRATE_TARGET_CONFORMAL_INTERVALS_WITH_CROSS_FITTED_RESIDUALS"
+  ],
+  "targets": ["moe_mpa", "mor_mpa"],
+  "spruce_primary_features": ["density_kg_m3", "length_mm", "width_mm", "height_mm", "weight_g", "quality_face_1", "quality_face_2"],
+  "primary_target_model": "CatBoostRegressor with fixed disclosed settings",
+  "open_implementation_model": "HistGradientBoostingRegressor sensitivity",
+  "risk_model": "ExtraTreesRegressor fitted to log1p absolute cross-fitted target residuals",
+  "primary_evaluations": ["author_provided_train_test", "five_fold_group_cv_by_sample_cluster"],
+  "label_efficiency_fractions": [0.05, 0.1, 0.2, 0.4, 0.6, 0.8],
+  "interval_nominal_levels": [0.8, 0.9, 0.95],
+  "consensus_rule": {
+    "repeated_group_cv_replicates": 6,
+    "predict": "at least 5 of 6 PREDICT votes",
+    "abstain": "at least 5 of 6 ABSTAIN votes",
+    "otherwise": "REVIEW"
+  },
+  "success_rules": {
+    "target_adaptation_support": "positive R2 in both provided test and group-aware OOF evaluation for both outcomes",
+    "risk_support": "positive error correlation, normalized AURC below 1, and high-error capture above source disagreement",
+    "interval_support": "nominal coverage with width or Winkler improvement over constant conformal comparator",
+    "stability_support": "leave-one-replicate-out consensus changed-decision fraction below 0.05",
+    "same_regime_support": "must be evaluated only after an external clear-wood file passes schema, units, protocol, clustering, and source-overlap audits"
+  },
+  "prohibited_actions": [
+    "claim Spruce is same-regime clear wood",
+    "use external labels to redefine the regime gate",
+    "select a dataset because it gives positive R2",
+    "pool ASTM/COPANT/NBR records without standard stratification",
+    "claim a novel universally superior predictor",
+    "claim same-regime generalization before the LPF/SFB or another qualified clear-wood dataset is executed"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "post_hoc_revision_documentation_not_new_validation",
+  "input_columns": [
+    "bending_test_regime",
+    "evidence_basis",
+    "observation_unit",
+    "pooling_justification",
+    "predictor_harmonization",
+    "regime_id",
+    "role",
+    "specimen_condition"
+  ],
+  "contains_MOE_MOR_or_other_target_outcomes": false,
+  "num_dimensions": 5,
+  "num_regimes_compared": 3,
+  "decisions": {
+    "USDA_internal_source_strata": "PASS",
+    "Pinus_patula_boards": "VETO",
+    "Spruce_lamellae": "VETO"
+  },
+  "caveat": "USDA internal PASS is a metadata-level demonstration only, not an independent positive transport test."
+}

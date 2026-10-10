@@ -1,0 +1,20 @@
+{
+  "title": "WoodPhys-DG: structural-wood transportability and target-regime analysis",
+  "creators": [
+    {
+      "name": "Talaat, Amira Samy",
+      "affiliation": "Electronics Research Institute",
+      "orcid": "0000-0002-9413-3079"
+    }
+  ],
+  "description": "Research scripts, frozen protocols, and aggregate evaluation tables for WoodPhys-DG. External structural-wood datasets are referenced by DOI rather than redistributed.",
+  "access_right": "open",
+  "license": "mit",
+  "upload_type": "software",
+  "keywords": [
+    "wood mechanics",
+    "transportability",
+    "domain shift",
+    "uncertainty estimation"
+  ]
+}

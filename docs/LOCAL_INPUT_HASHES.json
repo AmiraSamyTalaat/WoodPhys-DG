@@ -1,0 +1,45 @@
+{
+  "description": "Exact model-ready input snapshots available in the research archive; no source data included in this release.",
+  "inputs": [
+    {
+      "filename": "APPLICABILITY_WEIGHTED_DEVELOPMENT_PREDICTIONS.csv",
+      "bytes": 113252,
+      "sha256": "5b1acde77a02349bb6f13881353f4a4de77349679ea2f0ec4810d44b23449148"
+    },
+    {
+      "filename": "Board_Data.csv",
+      "bytes": 23308,
+      "sha256": "705c84725af8fe252624321d51a348f04f8f2d42e0322f32dc07d2156c22e0cd"
+    },
+    {
+      "filename": "EXTERNAL_FROZEN_PREDICTIONS.csv",
+      "bytes": 129171,
+      "sha256": "c1c2c70564b6ce802bde422c5d2dc4fa2d0837e9c36d5c93080428e6a567fe24"
+    },
+    {
+      "filename": "SPRUCE_FROZEN_EXTERNAL_PREDICTIONS.csv",
+      "bytes": 872400,
+      "sha256": "c75840d46dd791ccb94ae48eb6b15a8019014fc7e0e51fb2e4a32c04740578a5"
+    },
+    {
+      "filename": "SPRUCE_SOURCE_WEIGHTS.csv",
+      "bytes": 1457891,
+      "sha256": "17e1205ba816453bf3a5748fae147ece55b44076e78fba7a5c7a5f24c1e46df4"
+    },
+    {
+      "filename": "USDA_DOMAIN_AND_TAXON_SPLIT_MANIFEST.csv",
+      "bytes": 38573,
+      "sha256": "d9446ae19fdcf6760262aad4d44fb16502d36c464c46c66bc17cbb2293d756a2"
+    },
+    {
+      "filename": "spruce_structural_board_separate_regime.csv",
+      "bytes": 1669155,
+      "sha256": "6fb24b1e25edc8cbd843546df80319cd7118289513554842d7bd497715daf52b"
+    },
+    {
+      "filename": "usda_clearwood_primary_model_ready.csv",
+      "bytes": 412854,
+      "sha256": "7746286ed761512f786e83b25ecc98c2caa51a64830b7f7996b4c4faf689429d"
+    }
+  ]
+}

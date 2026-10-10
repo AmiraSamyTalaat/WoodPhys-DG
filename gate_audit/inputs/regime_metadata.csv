@@ -1,0 +1,5 @@
+regime_id,role,observation_unit,specimen_condition,bending_test_regime,predictor_harmonization,pooling_justification,evidence_basis
+USDA_reference,source,species_group_summary,small_clear_specimen,clearwood_handbook_summaries,documented,documented,Original submitted manuscript section 2.2 and revised section 2.9
+USDA_internal_source_strata,internal_reference,species_group_summary,small_clear_specimen,clearwood_handbook_summaries,documented,documented,Internal USDA development strata only; not an independent external same-regime test
+Pinus_patula_boards,external,individual_structural_board,structural_board_with_knots,structural_lumber_flexure,unverified,unsupported,Original manuscript sections 2.2 2.9; later reviewer-only metadata table
+Spruce_lamellae,external,individual_structural_lamella,structural_conditioned_lamella,longitudinal_four_point_bending,unverified,unsupported,Original manuscript sections 2.2 2.10; later reviewer-only metadata table

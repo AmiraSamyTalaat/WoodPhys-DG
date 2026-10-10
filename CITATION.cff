@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the software version used in your analysis."
+title: "WoodPhys-DG: structural-wood transportability and target-regime analysis"
+type: software
+authors:
+  - family-names: Talaat
+    given-names: Amira Samy
+    orcid: "https://orcid.org/0000-0002-9413-3079"
+version: 1.0.0
+keywords:
+  - wood mechanics
+  - transportability
+  - dataset shift
+  - grouped validation

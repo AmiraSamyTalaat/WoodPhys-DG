@@ -1,0 +1,44 @@
+{
+  "stage": "4R",
+  "analysis_role": "disclosed_post_hoc_secondary_target_regime_replication",
+  "confirmatory_zero_shot_lock_unchanged": true,
+  "dataset": {
+    "name": "Pinus patula structural board data",
+    "records_complete": 207,
+    "independent_groups": 24,
+    "group_variable": "Tree"
+  },
+  "targets": ["MOE", "MOR"],
+  "feature_sets": {
+    "density": ["Density"],
+    "basic": ["Density", "Spacing", "Pos", "CA"],
+    "full_physics": ["Density", "Spacing", "Pos", "CA", "MFA", "DeltaMFA", "DeltaDensity", "Knots", "SSDensity", "RW", "KnotA"]
+  },
+  "benchmark": {
+    "outer_evaluation": "six shuffled five-fold GroupKFold repetitions by Tree",
+    "seeds": [13, 42, 97, 131, 2026, 4099],
+    "comparators": ["frozen_zero_shot", "density_ridge", "basic_hgb", "full_hgb", "full_extra_trees", "full_plus_frozen_hgb"],
+    "primary_metrics": ["MAE", "RMSE", "R2", "NMAE"]
+  },
+  "label_efficiency": {
+    "group_separation": "whole trees",
+    "training_tree_fractions": [0.2, 0.4, 0.6, 0.8],
+    "repetitions": 8
+  },
+  "risk_and_conformal": {
+    "outer_evaluation": "three shuffled five-fold GroupKFold repetitions by Tree",
+    "outer_seeds": [13, 42, 97],
+    "inner_evaluation": "four-fold GroupKFold by Tree",
+    "risk_target": "log1p absolute cross-fitted residual",
+    "decision_thresholds": ["training q50", "training q90"],
+    "consensus": "two of three; ambiguous cases routed to REVIEW",
+    "nominal_coverages": [0.8, 0.9, 0.95]
+  },
+  "claim_boundaries": [
+    "This analysis does not repair or replace the original zero-shot lockbox result.",
+    "This analysis demonstrates target-regime prediction after transport rejection.",
+    "The frozen source prediction is evaluated only as a comparator or added feature.",
+    "The same-regime clear-wood external test remains separate and unresolved.",
+    "Adaptive intervals are not claimed to dominate constant intervals on every metric."
+  ]
+}
